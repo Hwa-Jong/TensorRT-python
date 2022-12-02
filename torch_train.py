@@ -8,7 +8,7 @@ import numpy as np
 import pytorch_model_summary as tsummary
 import cv2
 
-from utils import geenral
+from utils import general
 
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")

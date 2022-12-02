@@ -6,9 +6,7 @@ import tf2onnx
 import onnx
 import cv2
 
-from utils import geenral
-#from mmcv.tensorrt import onnx2trt, save_trt_engine
-
+from utils import general
 
 
 def train():

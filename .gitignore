@@ -1,3 +1,11 @@
+data/
+readme_imgs/
+ttt.py
+*.onnx
+*.pt
+*.h5
+*.trt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -5,6 +13,7 @@ __pycache__/
 
 # C extensions
 *.so
+*.vs
 
 # Distribution / packaging
 .Python

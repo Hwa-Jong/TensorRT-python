@@ -58,9 +58,9 @@
 >>```pip install <tensorrt_install_dir>/python/tensorrt-8.x.x.x-cp<python_ver>-none-linux_x86_64.whl```<br>
 >>```( in my case : C:\TensorRT-8.5.1.7\python\tensorrt-8.5.1.7-cp310-none-win_amd64.whl )```<br>
 >>```add environment path TensorRT-8.5.1.7\lib  ( in my case : C:\TensorRT-8.5.1.7\lib )```<br>
->><img src="./readme_imgs/onnx-tensorrt/set env path1.png" width="50%" height="50%" title="set_env_path1" alt="RubberDuck"></img>
->><img src="./readme_imgs/onnx-tensorrt/set env path2.png" width="50%" height="50%" title="set_env_path2" alt="RubberDuck"></img>
->><img src="./readme_imgs/onnx-tensorrt/set env path3.png" width="50%" height="50%" title="set_env_path3" alt="RubberDuck"></img>
+>><img src="./readme_imgs/onnx-tensorrt/set env path1.png" width="50%" height="50%" title="set_env_path1" alt="RubberDuck"></img><br>
+>><img src="./readme_imgs/onnx-tensorrt/set env path2.png" width="50%" height="50%" title="set_env_path2" alt="RubberDuck"></img><br>
+>><img src="./readme_imgs/onnx-tensorrt/set env path3.png" width="50%" height="50%" title="set_env_path3" alt="RubberDuck"></img><br>
 >>```Reboot```<br>
 >>
 >>8. download zlibwapi.dll<br>
@@ -76,5 +76,15 @@
 >>```( onnx_tf )C:\TensorRT-8.5.1.7\bin\trtexec  --onnx=vgg_tf.onnx --saveEngine=vgg_tf.trt```<br>
 
 ------
-now, You can use tensorRT.
+now, You can use tensorRT.<br>
 ```python compare_time.py```
+
+
+|Env|100 inference Time(sec)|
+|:---:|:---:|
+|Pytorch|5.16 sec| 
+|Pytorch-ONNX|9.22 sec| 
+|Pytorch-TensorRT|1.01 sec| 
+|Tensorflow|4.39 sec| 
+|Tensorflow-ONNX|11.62 sec| 
+|Tensorflow-TensorRT|1.10 sec| 

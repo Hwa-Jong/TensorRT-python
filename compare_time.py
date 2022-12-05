@@ -137,7 +137,8 @@ def torch_trt_test(tmr):
             pass
 
         with tmr['inference']:
-            pred = trt_model.inference(img)
+            for i in range(iter_num):
+                pred = trt_model.inference(img)
 
     return tmr, pred
 
@@ -165,7 +166,7 @@ def tf_test(tmr):
             for i in range(iter_num):
                 pred = model(img, training=False)
     
-    return tmr, pred
+    return tmr, pred.numpy()
 
 def tf_onnx_test(tmr):
     with tmr['total']:
@@ -200,7 +201,8 @@ def tf_trt_test(tmr):
             pass
 
         with tmr['inference']:
-            pred = trt_model.inference(img)
+            for i in range(iter_num):
+                pred = trt_model.inference(img)
 
         
     return tmr, pred

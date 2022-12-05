@@ -1,5 +1,4 @@
 data/
-readme_imgs/
 ttt.py
 *.onnx
 *.pt
